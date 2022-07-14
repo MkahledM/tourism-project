@@ -49,7 +49,7 @@
                                 <a href="single.html" class="dropdown-item">Blog Detail</a>
                             </div>
                         </div>
-                        <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
+                        <a href="{{route('contact.index')}}" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </nav>

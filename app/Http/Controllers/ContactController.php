@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
-
 use function Ramsey\Uuid\v1;
 
 class ContactController extends Controller
@@ -37,7 +36,15 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validation
+        $request->validate([
+            "name" =>"required",
+            "email" =>"email",
+            "subject" =>"required",
+            "message" =>"required",
+        ]);
+        Contact::create($request->all());
+        return redirect()->route('contact.index');
     }
 
     /**

@@ -20,4 +20,6 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [HomeController::class,'index'])->name('home');
 
-Route::get('/contact', [ContactController::class,'index'])->name('contact');
+// Route::get('/contact', [ContactController::class,'index'])->name('contact');
+
+Route::resource('/contact', ContactController::class);

@@ -104,28 +104,29 @@
                 <div class="col-md-7">
                     <div class="contact-form">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate" method="post" action="{{route('contact.store')}}">
+                            @csrf
                             <div class="form-row">
                                 <div class="col-md-6">
                                     <div class="control-group">
-                                        <input type="text" class="form-control p-4" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                        <p class="help-block text-danger"></p>
+                                        <input type="text" class="form-control p-4" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" name="name" value="{{old('name')}}"/>
+                                        <p class="help-block text-danger">{{$errors->first("name")}}</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="control-group">
-                                        <input type="email" class="form-control p-4" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block text-danger"></p>
+                                        <input type="email" class="form-control p-4" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" name="email" value="{{old('email')}}"/>
+                                        <p class="help-block text-danger">{{$errors->first("email")}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
+                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" name="subject" value="{{old('subject')}}"/>
+                                <p class="help-block text-danger">{{$errors->first("subject")}}</p>
                             </div>
                             <div class="control-group">
-                                <textarea class="form-control" rows="5" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
+                                <textarea class="form-control" rows="5" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message" name="message" value="{{old('message')}}"></textarea>
+                                <p class="help-block text-danger">{{$errors->first("message")}}</p>
                             </div>
                             <div>
                                 <button class="btn btn-primary font-weight-semi-bold px-4" style="height: 50px;" type="submit" id="sendMessageButton">Send Message</button>
