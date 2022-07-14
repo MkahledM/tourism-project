@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Home;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+use function Ramsey\Uuid\v1;
+
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('user.home');
+        return view('contact.index');
     }
 
     /**
@@ -41,10 +43,10 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Home  $home
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show(Home $home)
+    public function show(Contact $contact)
     {
         //
     }
@@ -52,10 +54,10 @@ class HomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Home  $home
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit(Home $home)
+    public function edit(Contact $contact)
     {
         //
     }
@@ -64,10 +66,10 @@ class HomeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Home  $home
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Home $home)
+    public function update(Request $request, Contact $contact)
     {
         //
     }
@@ -75,10 +77,10 @@ class HomeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Home  $home
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Home $home)
+    public function destroy(Contact $contact)
     {
         //
     }

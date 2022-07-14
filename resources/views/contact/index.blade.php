@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DotCom - Creative Agency Website Template</title>
+    <title>Tourism</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -13,7 +13,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
@@ -31,14 +31,14 @@
         <div class="container-lg p-0">
             <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 text-white display-4"><span class="text-primary">D</span>ot<span class="text-primary">C</span>om</h1>
+                    <h1 class="m-0 text-white display-4"><span class="text-primary">T</span>ou<span class="text-primary">R</span>ism</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="{{route('home')}}" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="service.html" class="nav-item nav-link">Services</a>
                         <a href="pricing.html" class="nav-item nav-link">Pricing</a>
@@ -83,7 +83,7 @@
                         <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
                         <div class="d-flex flex-column">
                             <h5 class="font-weight-bold">Our Office</h5>
-                            <p class="m-0">123 Street, New York, USA</p>
+                            <p class="m-0">123 Street, EL Minya, EGYPT</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center border mb-3 p-4">
@@ -144,7 +144,8 @@
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 mt-n2 text-white display-4"><span class="text-primary">D</span>ot<span class="text-primary">C</span>om</h1>
+                <h1 class="m-0 text-white display-4"><span class="text-primary">T</span>ou<span class="text-primary">R</span>ism</h1>
+
                 </a>
                 <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
                 <div class="d-flex justify-content-start mt-4">
@@ -157,7 +158,7 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="font-weight-bold text-primary mb-4">Quick Links</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="{{route("home")}}"><i class="fa fa-angle-right text-primary mr-2"></i>Home</a>
                     <a class="text-white mb-2" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>About Us</a>
                     <a class="text-white mb-2" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Services</a>
                     <a class="text-white mb-2" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Pricing</a>
@@ -167,7 +168,7 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="font-weight-bold text-primary mb-4">Popular Links</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="{{route("home")}}"><i class="fa fa-angle-right text-primary mr-2"></i>Home</a>
                     <a class="text-white mb-2" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>About Us</a>
                     <a class="text-white mb-2" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Services</a>
                     <a class="text-white mb-2" href="#"><i class="fa fa-angle-right text-primary mr-2"></i>Pricing</a>
@@ -177,7 +178,7 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="font-weight-bold text-primary mb-4">Get In Touch</h5>
                 <p>Dolor clita stet nonumy clita diam vero, et et ipsum diam labore</p>
-                <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>123 Street, New York, USA</p>
+                <p><i class="fa fa-map-marker-alt text-primary mr-2"></i>123 Street, El Minya, EGYPT</p>
                 <p><i class="fa fa-phone-alt text-primary mr-2"></i>+012 345 67890</p>
                 <p><i class="fa fa-envelope text-primary mr-2"></i>info@example.com</p>
             </div>
