@@ -37,7 +37,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto py-0">
-              <a href="/home" class="nav-item nav-link active">Home</a>
+              <a href="/start" class="nav-item nav-link active">Home</a>
               <a href="/hotel" class="nav-item nav-link">Hotels</a>
                 <a href="service.html" class="nav-item nav-link">Services</a>
                 <a href="pricing.html" class="nav-item nav-link">Receving</a>

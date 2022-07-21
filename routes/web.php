@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SartController;
 
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\PlaceController;
@@ -26,8 +26,8 @@ use App\Http\Controllers\BookController;
 //     return view('welcome');
 // });
 
-Route::get('/', [HomeController::class,'index']);
-Route::get('home', [HomeController::class,'index']);
+Route::get('/', [SartController::class,'index']);
+Route::get('start', [SartController::class,'index']);
 
 Route::resource('hotel', HotelController::class);
 Route::resource('place', PlaceController::class);

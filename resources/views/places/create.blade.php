@@ -1,8 +1,6 @@
-{{-- @extends('layout.app')
-@section('title')
-    Create Posts
-@endsection
-@section('body') --}}
+ @extends('layout.app')
+
+ @section('body') 
 
 <form action="{{route('place.store')}}" method="POST">
     @csrf
@@ -46,4 +44,4 @@
     <button type="submit" class="btn btn-primary">Submit</button>
 
   </form>
-{{-- @endsection --}}
+ @endsection 
