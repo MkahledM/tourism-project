@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Hotel;
+use App\Models\Place;
 
 use App\Models\Home;
 use Illuminate\Http\Request;
@@ -82,4 +84,6 @@ class HomeController extends Controller
     {
         //
     }
-}
+
+    }
+

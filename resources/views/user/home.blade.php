@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -23,6 +23,29 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        input[type=text] {
+  width: 130px;
+  height: 50px;
+
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 50%;
+  
+}
+    </style>
 </head>
 
 <body>
@@ -38,10 +61,13 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">Places</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="pricing.html" class="nav-item nav-link">Receving</a>
+                        <a href="/home" class="nav-item nav-link active">Home</a>
+                        <a href="/hotel" class="nav-item nav-link">Hotels</a>
+                        <a href="/place" class="nav-item nav-link">Places</a>
+                        <a href="/book" class="nav-item nav-link">booking</a>
+
+                        {{-- <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="pricing.html" class="nav-item nav-link">Receving</a> --}}
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
@@ -52,7 +78,19 @@
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
+              
             </nav>
+            <div class="form-search ml-4" >
+                <form action="/search" method="GET">
+                    <div class="form-group" style="display: flex">
+                          <input type="text" name="ttt"  class="form-controll">
+
+                        {{-- <input type="text" name="ttt" class="form-controll"> --}}
+                         <button type="submit" class="btn btn-primary" style="  border-radius: 4px;
+                         " >Search</button>
+                    </div>
+                </form>
+            </div> 
         </div>
     </div>
     <!-- Navbar End -->
@@ -60,7 +98,9 @@
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
+        
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            
             <ol class="carousel-indicators">
                 <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#header-carousel" data-slide-to="1"></li>
@@ -103,6 +143,67 @@
     <!-- Carousel End -->
 
 
+
+
+    {{-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> --}}
+           <div class=" slide d-flex justify-content-center">
+      <div id="carouselExampleCaptions" class="carousel w-25  " data-bs-ride="carousel" style="height:25%;" >
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/h2d2.jpg" class="d-block " width="100%" height="100%">
+           
+          </div>
+          <div class="carousel-item">
+            <img src="img/h2d3.jpg" class="d-block " width="100%" height="100%">
+            
+          </div>
+          <div class="carousel-item">
+            <img src="img/h2d1.jpg" class="d-block " width="100%" height="100%">
+           
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+   
+
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container">
@@ -120,11 +221,12 @@
 
         </div>
     </div>
+
     <!-- About End -->
 
 
     <!-- Services Start -->
-    <div class="container-fluid pt-5 pb-3">
+    {{-- <div class="container-fluid pt-5 pb-3">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-5">
@@ -141,7 +243,7 @@
                                 <div class="d-flex flex-column">
                                     <h4 class="font-weight-bold mb-3">Reservation of tourist places</h4>
                                     <p>Et kasd justo clita amet kasd, vero amet vero eos kasd diam justo, ipsum diam sed elitr erat</p>
-                                    <a class="font-weight-semi-bold" href="">Read More <i class="fa fa-angle-double-right"></i></a>
+                                    <a class="font-weight-semi-bold" href="/place">Read More <i class="fa fa-angle-double-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -179,7 +281,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Services End -->
 
 
@@ -197,7 +299,7 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid pt-5">
+    {{-- <div class="container-fluid pt-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-5">
@@ -272,12 +374,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Testimonial End -->
 
 
     <!-- Blog Start -->
-    <div class="container-fluid pt-5">
+    {{-- <div class="container-fluid pt-5">
         <div class="container">
             <div class="text-center">
                 <small class="bg-primary text-white text-uppercase font-weight-bold text-center px-1">Our Blog</small>
@@ -332,7 +434,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Blog End -->
 
 
@@ -394,6 +496,7 @@
 
 
     <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
